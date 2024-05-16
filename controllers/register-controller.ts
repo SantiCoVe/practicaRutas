@@ -9,8 +9,8 @@ let register = async( req: Request, res: Response ) => {
             password,
             names
         } = req.body
-
         const registerUser = await userService.register(new User(email, password, names));
+
         return res.status(201).send({
             status: 'registrado con exito'
         });
